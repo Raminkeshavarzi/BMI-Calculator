@@ -26,10 +26,12 @@ class ViewController: UIViewController {
     @IBAction func calculateBmi(_ sender: Any) {
         let height = Double(heightInput.text!)!
         let weight = Double(weightInput.text!)!
-//        calculation
+        
+//calculation
         let bmi = Double(weight / (height * height))
         let bodyMassIndex = Double(round(1000*bmi)/1000)
-
+        
+//Rendering result
         label.text = "Your BMI is \(bodyMassIndex)"
     }
 }
